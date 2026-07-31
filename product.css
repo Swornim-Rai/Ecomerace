@@ -1,0 +1,232 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+    font-family:"Roboto",sans-serif;
+}
+
+body{
+    background:#FFFFFF;
+    color:#1A1A1A;
+}
+
+/* ================= HEADER ================= */
+
+header{
+    height:100px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#FFFFFF;
+    border-bottom:1px solid #E0E0E0;
+}
+
+.logo{
+    width:30%;
+    display:flex;
+    align-items:center;
+    padding-left:40px;
+}
+
+.logo h1{
+    color:#000000;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.logo h1:hover{
+    color:#D4AF37;
+}
+
+.links{
+    width:70%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:40px;
+    padding-right:70px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#1A1A1A;
+    font-size:18px;
+    font-weight:500;
+    transition:.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active{
+    color:#D4AF37;
+}
+
+.links input{
+    width:250px;
+    height:40px;
+    padding:0 15px;
+    border:1px solid #E0E0E0;
+    border-radius:6px;
+    outline:none;
+    color:#1A1A1A;
+    transition:.3s;
+}
+
+.links input::placeholder{
+    color:#1A1A1A;
+    opacity:.5;
+}
+
+.links input:focus{
+    border:1px solid #D4AF37;
+}
+
+/* ================= PRODUCT PAGE ================= */
+
+.hero{
+    padding:50px 8%;
+}
+
+.product-container{
+    display:flex;
+    gap:30px;
+    align-items:flex-start;
+}
+
+/* ================= FILTER ================= */
+
+.filter{
+    width:280px;
+    background:#FFFFFF;
+    border:1px solid #E0E0E0;
+    border-radius:10px;
+    padding:25px;
+}
+
+.filter h2{
+    color:#000000;
+    margin-bottom:20px;
+}
+
+.filter-group{
+    margin-bottom:25px;
+}
+
+.filter-group h3{
+    color:#000000;
+    margin-bottom:12px;
+    font-size:18px;
+}
+
+.filter-group label{
+    display:block;
+    margin:10px 0;
+    font-size:15px;
+    color:#1A1A1A;
+    cursor:pointer;
+}
+
+.filter-group input{
+    margin-right:8px;
+}
+
+.filter-btn{
+    width:100%;
+    padding:12px;
+    background:#D4AF37;
+    color:#000000;
+    border:none;
+    border-radius:6px;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.filter-btn:hover{
+    background:#1A1A1A;
+    color:#FFFFFF;
+}
+
+/* ================= PRODUCTS ================= */
+
+.products{
+    flex:1;
+    background:#FFFFFF;
+    border:1px solid #E0E0E0;
+    border-radius:10px;
+    padding:25px;
+    min-height:600px;
+}
+
+.products h2{
+    color:#000000;
+    margin-bottom:20px;
+}
+
+.products p{
+    color:#1A1A1A;
+}
+
+/* ================= PRODUCT GRID (Future Use) ================= */
+
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+    gap:25px;
+}
+
+.product-card{
+    background:#FFFFFF;
+    border:1px solid #E0E0E0;
+    border-radius:10px;
+    padding:15px;
+    transition:.3s;
+}
+
+.product-card:hover{
+    border-color:#D4AF37;
+}
+
+.product-card img{
+    width:100%;
+    border-radius:8px;
+}
+
+.product-card h3{
+    color:#000000;
+    margin:15px 0 10px;
+}
+
+.product-card p{
+    color:#1A1A1A;
+    margin-bottom:10px;
+}
+
+.product-card .price{
+    color:#D4AF37;
+    font-size:20px;
+    font-weight:bold;
+}
+
+.product-card button{
+    width:100%;
+    padding:10px;
+    margin-top:15px;
+    border:none;
+    border-radius:6px;
+    background:#1A1A1A;
+    color:#FFFFFF;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.product-card button:hover{
+    background:#D4AF37;
+    color:#000000;
+}
