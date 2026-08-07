@@ -1,21 +1,32 @@
 *{
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
+
 body{
     background-color: #FAFBFC;
     font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.5;
 }
+
+/* ========== YOUR EXISTING HEADER STYLES ========== */
 header{
     height: 100px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    Background: #FFFFFF;
+    background: #FFFFFF;
     color: #1E293B;
     text-align: center;
+    border-bottom: 1px solid #e5e7eb;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
+
 header .logo{
     height: 100%;
     width: 30%;
@@ -25,9 +36,11 @@ header .logo{
     padding-left: 40px;
     color: #000000;
 }
+
 header .logo:hover{
     color: #D4AF37;
 }
+
 header .links{
     height: 100%;
     width: 70%;
@@ -35,6 +48,7 @@ header .links{
     justify-content: center;
     align-items: center;
 }
+
 .nav-links{
     display: flex;
     flex-direction: row;
@@ -44,20 +58,324 @@ header .links{
     gap: 40px;
     padding-right: 100px;
 }
+
 .nav-links a{
     font-size: 20px;
     color: #1A1A1A;
     text-decoration: none;
 }
+
 .nav-links a:hover{
     color: #D4AF37;
 }
+
 .links input{
     height: 30px;
     width: 250px;
     border-radius: 5px;
+    border: 1px solid #d1d5db;
+    padding-left: 10px;
+    outline: none;
 }
+
 .links input::placeholder{
     padding-left: 10px;
     opacity: 0.5;
+}
+
+/* ========== MAIN LAYOUT ========== */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 40px 60px;
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    gap: 40px;
+}
+
+/* ========== BLOG HEADER ========== */
+.blog-header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #111;
+}
+
+.blog-header p {
+    color: #6b7280;
+    margin-bottom: 28px;
+    font-size: 1rem;
+}
+
+.blog-search {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    margin-bottom: 32px;
+    outline: none;
+    background: white;
+}
+
+.blog-search:focus {
+    border-color: #9ca3af;
+}
+
+/* ========== BLOG GRID ========== */
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.blog-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    border: 1px solid #f3f4f6;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.blog-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.card-image {
+    width: 100%;
+    height: 160px;
+    background: #d1d5db;
+}
+
+.card-body {
+    padding: 18px 18px 20px;
+}
+
+.card-body h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #111;
+}
+
+.card-body p {
+    font-size: 0.9rem;
+    color: #6b7280;
+    margin-bottom: 10px;
+    line-height: 1.45;
+}
+
+.card-meta {
+    font-size: 0.8rem;
+    color: #9ca3af;
+    margin-bottom: 14px;
+}
+
+.read-more {
+    display: inline-block;
+    background: #1f2937;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.read-more:hover {
+    background: #111;
+}
+
+/* ========== SIDEBAR ========== */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.sidebar-box {
+    background: white;
+    border-radius: 10px;
+    padding: 22px;
+    border: 1px solid #f3f4f6;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.sidebar-box h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: #111;
+}
+
+.categories {
+    list-style: none;
+}
+
+.categories li {
+    margin-bottom: 10px;
+}
+
+.categories a {
+    color: #3b82f6;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.categories a:hover {
+    text-decoration: underline;
+}
+
+.newsletter p {
+    font-size: 0.9rem;
+    color: #6b7280;
+    margin-bottom: 14px;
+    line-height: 1.45;
+}
+
+.newsletter input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+    outline: none;
+}
+
+.newsletter button {
+    width: 100%;
+    padding: 10px;
+    background: #1f2937;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.newsletter button:hover {
+    background: #111;
+}
+
+/* ========== FOOTER ========== */
+.footer {
+    background: white;
+    border-top: 1px solid #e5e7eb;
+    padding: 40px 40px 30px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 40px;
+}
+
+.footer-col h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 14px;
+    color: #111;
+}
+
+.footer-col p {
+    font-size: 0.9rem;
+    color: #6b7280;
+    line-height: 1.6;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    margin-bottom: 8px;
+}
+
+.footer-col a {
+    color: #4b5563;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.footer-col a:hover {
+    color: #111;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.social-circle {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #e5e7eb;
+    display: inline-block;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 1024px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .blog-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    header {
+        height: auto;
+        padding: 15px 20px;
+        flex-wrap: wrap;
+    }
+
+    header .logo {
+        width: 100%;
+        padding-left: 0;
+        justify-content: center;
+    }
+
+    header .links {
+        width: 100%;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        padding-right: 0;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .container {
+        padding: 24px 20px 40px;
+    }
+
+    .blog-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer {
+        padding: 30px 20px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
 }
