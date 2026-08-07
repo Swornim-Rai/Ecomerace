@@ -4,7 +4,7 @@
 }
 body{
     background-color: #FAFBFC;
-    font-family: Arial, sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 header{
     height: 100px;
@@ -60,4 +60,11 @@ header .links{
 .links input::placeholder{
     padding-left: 10px;
     opacity: 0.5;
+}
+.Mainbody{
+  height: 500px;
+  width: 85%;
+  background-color: #c32525;
+  margin-left: 130px;
+  margin-top: 50px;
 }
