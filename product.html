@@ -8,71 +8,228 @@
 </head>
 <body>
 
+    <!-- ========== HEADER (your existing structure) ========== -->
     <header>
         <div class="logo">
             <h1>EcoHub</h1>
         </div>
-
         <div class="links">
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="product.html" class="active">Products</a></li>
-                <li><a href="about.html">About</a></li>
                 <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about.html">About Us</a></li>
             </ul>
-
-            <input type="text" placeholder="Search Products...">
+            <input type="text" placeholder="Search...">
+            <div class="nav-icons">
+                <span class="icon-circle"></span>
+                <span class="icon-circle"></span>
+            </div>
         </div>
     </header>
 
-    <section class="hero">
-
-        <div class="product-container">
-
-            <aside class="filter">
-
-                <h2>Filters</h2>
-
-                <div class="filter-group">
-                    <h3>Category</h3>
-
-                    <label><input type="checkbox"> Electronics</label>
-                    <label><input type="checkbox"> Fashion</label>
-                    <label><input type="checkbox"> Home</label>
-                    <label><input type="checkbox"> Accessories</label>
-                </div>
-
-                <div class="filter-group">
-                    <h3>Price</h3>
-
-                    <label><input type="radio" name="price"> Under $50</label>
-                    <label><input type="radio" name="price"> $50 - $100</label>
-                    <label><input type="radio" name="price"> $100 - $500</label>
-                    <label><input type="radio" name="price"> Above $500</label>
-                </div>
-
-                <div class="filter-group">
-                    <h3>Rating</h3>
-
-                    <label><input type="checkbox"> ⭐⭐⭐⭐⭐</label>
-                    <label><input type="checkbox"> ⭐⭐⭐⭐ & Up</label>
-                    <label><input type="checkbox"> ⭐⭐⭐ & Up</label>
-                </div>
-
-                <button class="filter-btn">Apply Filters</button>
-
-            </aside>
-
-            <div class="products">
-
-                
-
-            </div>
-
+    <!-- ========== MAIN CONTENT ========== -->
+    <main class="product-page">
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">
+            <h1>Products</h1>
+            <p>Home &gt; Products</p>
         </div>
 
-    </section>
+        <div class="product-container">
+            <!-- ========== LEFT FILTERS ========== -->
+            <aside class="filter">
+                <h2>Filters</h2>
+
+                <!-- Categories -->
+                <div class="filter-group">
+                    <h3>Categories</h3>
+                    <label><input type="checkbox"> Category 1</label>
+                    <label><input type="checkbox"> Category 2</label>
+                    <label><input type="checkbox"> Category 3</label>
+                    <label><input type="checkbox"> Category 4</label>
+                </div>
+
+                <!-- Price Range -->
+                <div class="filter-group">
+                    <h3>Price Range</h3>
+                    <input type="range" min="0" max="500" value="250" class="price-slider">
+                    <div class="price-labels">
+                        <span>$0</span>
+                        <span>$500+</span>
+                    </div>
+                </div>
+
+                <!-- Brand -->
+                <div class="filter-group">
+                    <h3>Brand</h3>
+                    <select class="brand-select">
+                        <option>Brand A</option>
+                        <option>Brand B</option>
+                        <option>Brand C</option>
+                        <option>Brand D</option>
+                    </select>
+                </div>
+
+                <!-- Rating -->
+                <div class="filter-group">
+                    <h3>Rating</h3>
+                    <label><input type="checkbox"> ★★★★★</label>
+                    <label><input type="checkbox"> ★★★★ & Up</label>
+                    <label><input type="checkbox"> ★★★ & Up</label>
+                </div>
+
+                <!-- Availability -->
+                <div class="filter-group">
+                    <h3>Availability</h3>
+                    <label><input type="checkbox"> In Stock</label>
+                    <label><input type="checkbox"> Out of Stock</label>
+                </div>
+            </aside>
+
+            <!-- ========== RIGHT PRODUCTS AREA ========== -->
+            <div class="products-area">
+                <!-- Top bar: Search + Sort -->
+                <div class="products-topbar">
+                    <input type="text" class="product-search" placeholder="Search products...">
+                    <div class="sort-box">
+                        <label>Sort by:</label>
+                        <select>
+                            <option>Popularity</option>
+                            <option>Price: Low to High</option>
+                            <option>Price: High to Low</option>
+                            <option>Newest</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Product Grid -->
+                <div class="product-grid">
+                    <!-- Card 1 -->
+                    <div class="product-card">
+                        <div class="product-image"></div>
+                        <h3>Product Name</h3>
+                        <p class="price">$XX.XX</p>
+                        <div class="stars">★★★★★</div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="product-card">
+                        <div class="product-image"></div>
+                        <h3>Product Name</h3>
+                        <p class="price">$XX.XX</p>
+                        <div class="stars">★★★★★</div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="product-card">
+                        <div class="product-image"></div>
+                        <h3>Product Name</h3>
+                        <p class="price">$XX.XX</p>
+                        <div class="stars">★★★★★</div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="product-card">
+                        <div class="product-image"></div>
+                        <h3>Product Name</h3>
+                        <p class="price">$XX.XX</p>
+                        <div class="stars">★★★★★</div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="product-card">
+                        <div class="product-image"></div>
+                        <h3>Product Name</h3>
+                        <p class="price">$XX.XX</p>
+                        <div class="stars">★★★★★</div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div class="product-card">
+                        <div class="product-image"></div>
+                        <h3>Product Name</h3>
+                        <p class="price">$XX.XX</p>
+                        <div class="stars">★★★★★</div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+
+                    <!-- Card 7 -->
+                    <div class="product-card">
+                        <div class="product-image"></div>
+                        <h3>Product Name</h3>
+                        <p class="price">$XX.XX</p>
+                        <div class="stars">★★★★★</div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+
+                    <!-- Card 8 -->
+                    <div class="product-card">
+                        <div class="product-image"></div>
+                        <h3>Product Name</h3>
+                        <p class="price">$XX.XX</p>
+                        <div class="stars">★★★★★</div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+
+                    <!-- Card 9 -->
+                    <div class="product-card">
+                        <div class="product-image"></div>
+                        <h3>Product Name</h3>
+                        <p class="price">$XX.XX</p>
+                        <div class="stars">★★★★★</div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Pagination -->
+                <div class="pagination">
+                    <button class="page-btn">1</button>
+                    <button class="page-btn active">2</button>
+                    <button class="page-btn">3</button>
+                    <span class="dots">...</span>
+                    <button class="page-btn">10</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>EcoHub</h4>
+                <p>© 2026 EcoHub. All rights reserved.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="product.html">Products</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <p>Email: info@ecohub.com</p>
+                <p>Phone: +977000000000</p>
+            </div>
+            <div class="footer-col">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <span class="social-circle"></span>
+                    <span class="social-circle"></span>
+                    <span class="social-circle"></span>
+                </div>
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>
